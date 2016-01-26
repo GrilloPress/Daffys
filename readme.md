@@ -8,9 +8,15 @@ Say hi on Twitter: [@AndrewDuck_](https://twitter.com/AndrewDuck_)
 
 To get an interactive thing up, you write ```iex```. That stands for interactive elixir.
 
-Elixir files have an ```.exs``` extension. To run an ```.exs``` file you use ```elixir [[filename.exs]]```.
+Elixir files have an ```.ex``` or ```.exs``` extension. 
+
+The difference between the two are .exs files are for scripting and code that doesn't get compiled. ```.ex``` files are for compiling. Most code for production, other than tests and prototyping, should therefore be in an ```.ex``` file.
+
+To run an ```.exs``` file you use ```elixir [[filename.exs]]```.
 
 To run an ```.exs``` file within the ```iex``` interactive shell, you run ```iex [[filename.exs]]```
+
+To compile an ```.ex``` file you run: ```elixirc filename.ex```. This creates your "bytecode" which can be used by your ```iex``` interactive shell.
 
 ### Creating a Hello World file
 
@@ -61,6 +67,14 @@ The other way to create functions are within modules. Putting the module part as
 def double(a) do
   a * 2
 end
+```
 
+To call this we would need the module name, taking it as ```Math```, we would call:
+
+```elixir
+Math.double(1)
+```
+
+Which would return 2 as before.
 
 ### Making a module
