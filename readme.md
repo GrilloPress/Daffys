@@ -78,3 +78,39 @@ Math.double(1)
 Which would return 2 as before.
 
 ### Making a module
+
+To create a module you must use the ```defmodule``` keyword. You use CamelCase when writing a module name. Modules are quite similar to Classes in many ways but don't do inheritance as you may expect coming from Ruby etc.
+
+Let's create a module called "InstaPoem". Our definition starts by writing:
+
+```elixir
+defmodule InstaPoem do
+ # code inside here
+end
+```
+
+Modules are basically our libraries of functions. So let's create a function. Here is a simple function inside our InstaPoem module:
+
+```elixir
+defmodule InstaPoem do
+
+  def recite(first, last) do
+  
+    first <> " is the first thing I think of when i hear " <> last
+    
+  end
+  
+end
+```
+
+Here we have defined a function called recite which takes two arguments. Inside our function we concatenate our first argument with a line and finish it off concatenating it with our last argument.
+
+So, calling it we write:
+
+```elixir
+InstaPoem.recite("float", "boat")
+```
+
+This will output "float is the first thing I think of when i hear boat". Lovely.
+
+> The ```<>``` operator is a concatenating technique
