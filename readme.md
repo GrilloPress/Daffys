@@ -114,3 +114,59 @@ InstaPoem.recite("float", "boat")
 This will output "float is the first thing I think of when i hear boat". Lovely.
 
 > The ```<>``` operator is a concatenating technique
+
+## Control Structures
+
+As with other languages, you have control structures like if and unless.
+
+```elixir
+
+if true do
+  "hi"
+  else
+  "bye"
+end
+```
+
+If you need to use unless it is pretty similar:
+
+```elixir
+
+unless false do
+  "impressive code"
+  else
+  "yawn"
+end
+```
+
+It appears Elixir doesn't do else if stuff directly, rather preferring to use ```cond```. A bit like ```switch```.
+
+```cond``` looks like:
+
+```elixir
+
+fart = "yuk"
+smells = "pew"
+
+cond do
+  1 + 1 == 3 ->
+    "errrr what?"
+  fart == smells ->
+    "yeah but it is natural"
+  false or true ->
+    "niiiice"
+end
+```
+
+These are if statements. If you want an else if. Good luck with that.
+
+If nothing is true in a cond structure and error is returned.
+
+Case statements are also used.
+
+```elixir
+case :ok do
+  "Looks spiffing here son"
+end
+```
+
