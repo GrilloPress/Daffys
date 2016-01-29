@@ -170,3 +170,11 @@ case :ok do
 end
 ```
 
+### Maths and shit
+
+Most of the common ones are there. + * / etc.
+
+However, / always returns a float.
+
+So ```10 / 2 ``` is 5.0. To not get a float, use div(10, 2)
+
