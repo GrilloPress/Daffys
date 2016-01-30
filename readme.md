@@ -115,6 +115,43 @@ This will output "float is the first thing I think of when i hear boat". Lovely.
 
 > The ```<>``` operator is a concatenating technique
 
+Something worth noting in Elixir is that it is pretty common to see two functions within a module use the same name.
+
+This is pretty different from other object-oriented languages.
+
+Although this can naturally be a little confusing, it allows Elixir developers to create complete handling of function parameters. The below is a module with a single function that takes someone's offer and rejects it. Pretty rubbish so far
+
+```elixir
+defmodule Barter do
+    
+    def response(offer) do
+    
+    "#{offer}? No deal"
+    
+    end
+
+end
+```
+
+The ```#{}``` bit injects our variable into our string just like Ruby. So, even if we offer a 100000 we are getting a rejected offer.
+
+Rather than handle the offer internally to this function, what we can do is create another tiny function, with the same name, that handles offers that we want to accept.
+
+Below our first function, add the following:
+
+```elixir
+def response(offer) when offer > 5 do
+  "#{offer}? YOU GOT A DEAL!"  
+end
+```
+
+Here we have exactly the same name for our function but a "guard" which if a certain condition is met - in our case, anything over 5 - this particular function is used instead of our previous function.
+
+So, we have two functions with the same name inside our module. 
+
+> In Elixir you can tell the two apart by using this schema ```Barter.response/1``` and ```Barter.response/2```. The slash referring to ...
+
+
 ## Control Structures
 
 As with other languages, you have control structures like if and unless.
