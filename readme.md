@@ -215,3 +215,16 @@ However, / always returns a float.
 
 So ```10 / 2 ``` is 5.0. To not get a float, use div(10, 2)
 
+# Structs
+
+Structs are in some ways similar to classes.
+
+Structs in Elixir are not entirely like Structs in other languages that are completely immutable (unchangeable once created at compile time). You can update them.
+
+Structs can be useful in defining a group of data together in one record. Examples could be server or application configuration.
+
+You create your Structs inside Modules like so:
+
+```elixir
+
+```
