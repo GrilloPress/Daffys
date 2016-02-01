@@ -215,7 +215,7 @@ However, / always returns a float.
 
 So ```10 / 2 ``` is 5.0. To not get a float, use div(10, 2)
 
-# Structs
+### Structs
 
 Structs are in some ways similar to classes.
 
