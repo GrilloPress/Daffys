@@ -226,5 +226,34 @@ Structs can be useful in defining a group of data together in one record. Exampl
 You create your Structs inside Modules like so:
 
 ```elixir
+defmodule Website do
+
+  defstruct user: "user@domain.com", sitename: "Exciting Marketing Website", loudness: 11 
+
+end
 
 ```
+To just print out the Struct, you write: ```%Website```.
+
+To access the values within, you write Ruby like code:
+
+```elixir
+
+global = %Website{}
+global.user # Will output the user name
+
+```
+
+One thing to note is that your Struct's fields are locked once compiled. So, if I wanted to create another field for this record, I would have to create that in the file pre-compile.
+
+So, if i tried to use ```global.twitter``` it would cause an error.
+
+We can also create new records with the values provided acting as default values.
+
+```elixir
+
+new_site = %Website{sitename: "Yet another blogspam site"} # This will use the initial values added to a struct if no new value is provided
+
+```
+
+This will create a new record. If we output ```%Website{}``` again, it will only show the last record created. So, best to use variables to handle Structs if you need to use them regularly.
